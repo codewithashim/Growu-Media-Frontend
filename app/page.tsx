@@ -1,11 +1,11 @@
-import LandingPage from '@/src/pages/home/home'
-import React from 'react'
+import React from 'react';
+import LandingPage from '@/src/Pages/LandingPage/LandingPage';
 
 const HomePage = () => {
   return (
-    <div>
+    <section>
       <LandingPage />
-    </div>
+    </section>
   )
 }
 

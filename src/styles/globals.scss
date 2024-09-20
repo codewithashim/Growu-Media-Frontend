@@ -4,6 +4,8 @@
 
  //  color variables im using scss
  $primary_color: #1A1A1A;
+ $primary_text_color: #F2F2F2;
+ $secondary_color: #FFCC00;
 
 
  * {
@@ -14,15 +16,25 @@
 
  @font-face {
      font-family: 'Bulgatti';
-     src: url('../Asset/fonts/Bulgatti.ttf') format('ttf');
+     src: url('../Asset/fonts/Bulgatti.ttf');
      font-weight: normal;
      font-style: normal;
  }
 
+ @font-face {
+    font-family: 'Monument Extended';
+    src: url("../Asset/fonts/MonumentExtended-Ultrabold.otf");
+ }
+
+@font-face {
+    font-family: 'Monument';
+    src: url("../Asset/fonts/MonumentExtended-Regular.otf");
+}
+
  body {
      background: $primary_color;
      background-position: center;
-     
+
  }
 
  .container {
@@ -49,3 +61,5 @@
  button {
      cursor: pointer;
  }
+
+ 
