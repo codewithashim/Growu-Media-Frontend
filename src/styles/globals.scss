@@ -1,0 +1,51 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ //  color variables im using scss
+ $primary_color: #1A1A1A;
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ @font-face {
+     font-family: 'Bulgatti';
+     src: url('../Asset/fonts/Bulgatti.ttf') format('ttf');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ body {
+     background: $primary_color;
+     background-position: center;
+     
+ }
+
+ .container {
+     @apply mx-auto px-4 max-w-[1440px];
+
+     @screen sm {
+         @apply px-2 w-full;
+     }
+
+     @screen md {
+         @apply px-4;
+     }
+
+     @screen lg {
+         @apply px-6;
+     }
+ }
+
+ a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ button {
+     cursor: pointer;
+ }
