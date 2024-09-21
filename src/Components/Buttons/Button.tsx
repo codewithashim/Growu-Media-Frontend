@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
     href,
 }) => {
     const baseClasses = `
-        flex items-center text-[1.2rem] justify-center px-6 md:px-8 py-4 rounded-full 
+        flex  text-[1.2rem]  px-6 md:px-8 py-4 rounded-full 
         transition-all duration-300 focus:outline-none
         bg-gradient-to-br from-[#323232] to-[#141414]
         shadow-[-21px_16px_10px_0px_rgba(0,0,0,0.04),-12px_9px_9px_0px_rgba(0,0,0,0.13),-5px_4px_6px_0px_rgba(0,0,0,0.23),-1px_1px_4px_0px_rgba(0,0,0,0.26)]

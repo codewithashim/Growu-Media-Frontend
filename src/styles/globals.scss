@@ -62,4 +62,32 @@
      cursor: pointer;
  }
 
+ li {
+        list-style: none !important;   
+ }
+//  ==============
+
+.slick-slide {
+    transition: all 0.3s ease;
+}
+
+.slick-slide:not(.slick-current) {
+    opacity: 0.7;
+}
  
+
+.slick-dots {
+    bottom: -40px !important;
+}
+
+.slick-dots li {
+    margin: 0 !important;
+}
+
+.slick-dots li button {
+    padding: 0 !important;
+}
+
+.slick-dots li button:before {
+    content: none !important;
+}

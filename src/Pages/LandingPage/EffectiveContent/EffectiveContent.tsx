@@ -1,99 +1,61 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
+import { BannerOne, BannerThree, BannerTwo } from '@/src/Asset'
+
 
 const EffectiveContent = () => {
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    const getSlides = (count: number) => Array.from({ length: count }, (_, index) => ({
-        id: index,
-        src: `https://via.placeholder.com/350x150?text=Slide+${index + 1}`,
-        alt: `Slide ${index + 1}`
-    }));
-
-    const sideSliderSettings = {
-        dots: false,
-        infinite: true,
-        vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 0,
-        cssEase: "linear",
-        arrows: false,
-    };
-
-    const centerSliderSettings = {
-        dots: false,
-        infinite: true,
-        vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 1.5,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 3000,
-        autoplaySpeed: 1000,
-        cssEase: "linear",
-        arrows: false,
-        centerMode: true,
-        centerPadding: "0px",
-    };
-
     return (
-        <div className="container bg-black  rounded-xl mx-auto px-4 py-8 h-screen flex items-center">
-            <div className='flex justify-center items-center w-full h-full'>
-                <div className="flex justify-center items-center h-full w-full">
-                    {/* Left Slider */}
-                    <div className="h-full w-full">
-                        {isMounted && (
-                            <Slider {...sideSliderSettings} className="h-full w-full">
-                                {getSlides(8).map(slide => (
-                                    <div key={slide.id} className="p-2">
-                                        <Image src={slide.src} alt={slide.alt} width={365} height={205} objectFit="cover" />
-                                    </div>
-                                ))}
-                            </Slider>
-                        )}
+        <div className="container mx-auto my-6 md:my-8">
+            <div className='mb-6'>
+                <h1 className="text-white text-[2rem] text-center font-bold">Effective content. Guaranteed results.</h1>
+            </div>
+            <div className='bg-black  rounded-lg px-6 py-4'>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="space-y-4">
+                        <div className="relative h-[150px] sm:h-[200px] lg:h-[150px] w-full rounded-lg overflow-hidden">
+                            <Image src={BannerOne} alt="Banner 1" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                            <Image src={BannerOne} alt="Banner 2" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                            <Image src={BannerOne} alt="Banner 3" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative h-[150px] sm:h-[200px] lg:h-[150px] w-full rounded-lg overflow-hidden">
+                            <Image src={BannerOne} alt="Banner 4" layout="fill" objectFit="cover" />
+                        </div>
                     </div>
 
-                    {/* Middle Slider */}
-                    <div className="h-full w-full">
-                        {isMounted && (
-                            <Slider {...centerSliderSettings} className="h-full w-full">
-                                {getSlides(5).map(slide => (
-                                    <div key={slide.id} className="p-2">
-                                        <Image src={slide.src} alt={slide.alt} width={370} height={655} className='w-full h-full' objectFit="cover" />
-                                    </div>
-                                ))}
-                            </Slider>
-                        )}
+                    <div className="space-y-4">
+                        <div className="relative h-[150px] sm:h-[200px] lg:h-[150px] w-full rounded-lg overflow-hidden">
+                            <Image src={BannerTwo} alt="Banner 5" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative h-[500px]  w-full rounded-lg overflow-hidden">
+                            <Image src={BannerThree} alt="Banner 6" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative h-[150px] sm:h-[200px] lg:h-[150px] w-full rounded-lg overflow-hidden">
+                            <Image src={BannerTwo} alt="Banner 7" layout="fill" objectFit="cover" />
+                        </div>
                     </div>
 
-                    {/* Right Slider */}
-                    <div className="h-full w-full">
-                        {isMounted && (
-                            <Slider {...sideSliderSettings} className="h-full w-full">
-                                {getSlides(8).map(slide => (
-                                    <div key={slide.id} className="p-2">
-                                        <Image src={slide.src} alt={slide.alt} width={365} height={205} objectFit="cover" />
-                                    </div>
-                                ))}
-                            </Slider>
-                        )}
+                    <div className="space-y-4">
+                        <div className="relative h-[150px] sm:h-[200px] lg:h-[150px] w-full rounded-lg overflow-hidden">
+                            <Image src={BannerTwo} alt="Banner 8" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                            <Image src={BannerTwo} alt="Banner 9" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                            <Image src={BannerTwo} alt="Banner 10" layout="fill" objectFit="cover" />
+                        </div>
+                        <div className="relative h-[150px] sm:h-[200px] lg:h-[150px] w-full rounded-lg overflow-hidden">
+                            <Image src={BannerTwo} alt="Banner 11" layout="fill" objectFit="cover" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default EffectiveContent;
+export default EffectiveContent
