@@ -22,14 +22,14 @@
  }
 
  @font-face {
-    font-family: 'Monument Extended';
-    src: url("../Asset/fonts/MonumentExtended-Ultrabold.otf");
+     font-family: 'Monument Extended';
+     src: url("../Asset/fonts/MonumentExtended-Ultrabold.otf");
  }
 
-@font-face {
-    font-family: 'Monument';
-    src: url("../Asset/fonts/MonumentExtended-Regular.otf");
-}
+ @font-face {
+     font-family: 'Monument';
+     src: url("../Asset/fonts/MonumentExtended-Regular.otf");
+ }
 
  body {
      background: $primary_color;
@@ -63,31 +63,44 @@
  }
 
  li {
-        list-style: none !important;   
+     list-style: none !important;
  }
-//  ==============
 
-.slick-slide {
-    transition: all 0.3s ease;
-}
+ //  ==============
 
-.slick-slide:not(.slick-current) {
-    opacity: 0.7;
-}
- 
+ .slick-slide {
+     transition: all 0.3s ease;
+ }
 
-.slick-dots {
-    bottom: -40px !important;
-}
+ .slick-slide:not(.slick-current) {
+     opacity: 0.7;
+ }
 
-.slick-dots li {
-    margin: 0 !important;
-}
 
-.slick-dots li button {
-    padding: 0 !important;
-}
+ .slick-dots {
+     bottom: -40px !important;
+ }
 
-.slick-dots li button:before {
-    content: none !important;
-}
+ .slick-dots li {
+     margin: 0 !important;
+ }
+
+ .slick-dots li button {
+     padding: 0 !important;
+ }
+
+ .slick-dots li button:before {
+     content: none !important;
+ }
+
+ @media (max-width: 767px) {
+     .container {
+         border-radius: 0 !important;
+     }
+
+     .mobile-menu {
+         border-radius: 0 0 1rem 1rem;
+         margin-top: -1rem;
+         padding-top: 1rem;
+     }
+ }

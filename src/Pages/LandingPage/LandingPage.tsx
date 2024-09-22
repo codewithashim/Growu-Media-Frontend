@@ -5,6 +5,9 @@ import EffectiveContent from './EffectiveContent/EffectiveContent';
 import OurProjects from './OurProjects/OurProjects';
 import Testimonial from './Testimonial/Testimonial';
 import MonthlyPlan from './MonthlyPlan/MonthlyPlan';
+import OurProcess from './OurProcess/OurProcess';
+import SatisfactionSection from './SatisfactionSection/SatisfactionSection';
+import Faq from './Faq/Faq';
 
 const LandingPage = () => {
   return (
@@ -15,6 +18,9 @@ const LandingPage = () => {
       <OurProjects />
       <Testimonial />
       <MonthlyPlan />
+      <SatisfactionSection />
+      <OurProcess />
+      <Faq/>
     </section>
   )
 }
